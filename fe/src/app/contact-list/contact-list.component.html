@@ -1,0 +1,6 @@
+<input type="text" [(ngModel)]="searchTerm" placeholder="Search contacts...">
+<ul>
+  <li *ngFor="let contact of contacts | filter:searchTerm" (click)="viewContactDetails(contact)">
+    {{ contact.name }}
+  </li>
+</ul>
